@@ -7,12 +7,13 @@
 // except according to those terms.
 
 //! Ethereum ABI params.
+use serde::{Serialize};
 use crate::{Address, Bytes, FixedBytes, ParamType, Uint};
 use hex::ToHex;
 use std::fmt;
 
 /// Ethereum ABI params.
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, Serialize)]
 pub enum Token {
 	/// Address.
 	///
